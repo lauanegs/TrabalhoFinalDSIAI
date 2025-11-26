@@ -1,0 +1,17 @@
+@model Application.ViewModels.CategoryViewModel
+
+@{
+    ViewData["Title"] = "Detalhes da Categoria";
+}
+
+<h2>Detalhes da Categoria</h2>
+
+<div class="card p-3">
+    <p><strong>ID:</strong> @Model.Id</p>
+    <p><strong>Nome:</strong> @Model.Name</p>
+</div>
+
+<br />
+
+<a asp-action="Index" class="btn btn-secondary">Voltar</a>
+<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Editar</a>
