@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0RWfTSs2HLU=",
+  "dgSpecHash": "quMa7/tA2oW3cNEx17/dAR73xvwEvgPMuC6JbEan6Vzh5Owpv/a+BDQAd3uIV6sUHPdU+uL81hvnoruC7scLXg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Domain\\Domain.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\FEPAM UNIPAM\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.20\\microsoft.netcore.app.ref.8.0.20.nupkg.sha512",
-    "C:\\Users\\FEPAM UNIPAM\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.20\\microsoft.windowsdesktop.app.ref.8.0.20.nupkg.sha512",
-    "C:\\Users\\FEPAM UNIPAM\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.20\\microsoft.aspnetcore.app.ref.8.0.20.nupkg.sha512"
-  ],
+  "projectFilePath": "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Domain/Domain.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

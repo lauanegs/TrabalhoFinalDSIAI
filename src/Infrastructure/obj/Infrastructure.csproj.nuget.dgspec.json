@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Infrastructure\\Infrastructure.csproj": {}
+    "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Domain\\Domain.csproj": {
+    "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Domain/Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Domain/Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\FEPAM UNIPAM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Domain\\obj\\",
+        "projectPath": "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Domain/Domain.csproj",
+        "packagesPath": "/home/lauanegonzaga/.nuget/packages/",
+        "outputPath": "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FEPAM UNIPAM\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/lauanegonzaga/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,13 +32,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -54,40 +48,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Infrastructure\\Infrastructure.csproj": {
+    "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\FEPAM UNIPAM\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Infrastructure\\obj\\",
+        "projectPath": "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/home/lauanegonzaga/.nuget/packages/",
+        "outputPath": "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\FEPAM UNIPAM\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/lauanegonzaga/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -99,8 +79,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\FEPAM UNIPAM\\Desktop\\inventory_control_project\\InventoryControl\\src\\Domain\\Domain.csproj"
+              "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Domain/Domain.csproj": {
+                "projectPath": "/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Domain/Domain.csproj"
               }
             }
           }
@@ -109,13 +89,7 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -146,26 +120,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.20, 8.0.20]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.121/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,77 +1,72 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Application.Interfaces;
 using Application.ViewModels;
 using Domain.Entities;
-using Infrastructure.Data;
 using Infrastructure.Repositories;
-using Microsoft.EntityFrameworkCore;
+using Mapster;
+using MapsterMapper;
 
 namespace Application.Services
 {
-    // Simple service that uses the DbContext via repository for CRUD.
     public class ProductService : IProductService
     {
         private readonly IProductRepository _repo;
-        public ProductService(IProductRepository repo)
+        private readonly ICategoryRepository _categoryRepo;
+        private readonly IMapper _mapper;
+
+        public ProductService(IProductRepository repo, ICategoryRepository categoryRepo, IMapper mapper)
         {
             _repo = repo;
-        }
-
-        public async Task<ProductViewModel> CreateAsync(ProductViewModel vm)
-        {
-            var entity = new Product
-            {
-                Name = vm.Name,
-                Quantity = vm.Quantity,
-                Description = vm.Description,
-                Price = vm.Price
-            };
-            await _repo.AddAsync(entity);
-            return Map(entity);
-        }
-
-        public async Task<bool> DeleteAsync(Guid id)
-        {
-            var found = await _repo.GetByIdAsync(id);
-            if (found == null) return false;
-            await _repo.RemoveAsync(found);
-            return true;
+            _categoryRepo = categoryRepo;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<ProductViewModel>> GetAllAsync()
         {
             var list = await _repo.GetAllAsync();
-            return list.Select(Map);
+            return list.Adapt<IEnumerable<ProductViewModel>>();
         }
 
         public async Task<ProductViewModel?> GetByIdAsync(Guid id)
         {
-            var p = await _repo.GetByIdAsync(id);
-            return p == null ? null : Map(p);
+            var product = await _repo.GetByIdAsync(id);
+            return product?.Adapt<ProductViewModel>();
+        }
+
+        public async Task<ProductViewModel> CreateAsync(ProductViewModel vm)
+        {
+            var entity = vm.Adapt<Product>();
+            await _repo.AddAsync(entity);
+            return entity.Adapt<ProductViewModel>();
         }
 
         public async Task<bool> UpdateAsync(ProductViewModel vm)
         {
-            var p = await _repo.GetByIdAsync(vm.Id);
-            if (p == null) return false;
-            p.Name = vm.Name;
-            p.Quantity = vm.Quantity;
-            p.Description = vm.Description;
-            p.Price = vm.Price;
-            await _repo.UpdateAsync(p);
+            var entity = await _repo.GetByIdAsync(vm.Id);
+            if (entity == null) return false;
+
+            _mapper.Map(vm, entity);
+
+            await _repo.UpdateAsync(entity);
             return true;
         }
 
-        private static ProductViewModel Map(Product p) => new ProductViewModel
+        public async Task<bool> DeleteAsync(Guid id)
         {
-            Id = p.Id,
-            Name = p.Name,
-            Quantity = p.Quantity,
-            Description = p.Description,
-            Price = p.Price
-        };
+            var product = await _repo.GetByIdAsync(id);
+            if (product == null) return false;
+
+            await _repo.RemoveAsync(product);
+            return true;
+        }
+
+        public async Task<IEnumerable<CategoryViewModel>> GetCategoriesAsync()
+        {
+            var categories = await _categoryRepo.GetAllAsync();
+            return categories.Select(c => new CategoryViewModel
+            {
+                Id = c.Id,
+                Name = c.Name
+            });
+        }
     }
 }

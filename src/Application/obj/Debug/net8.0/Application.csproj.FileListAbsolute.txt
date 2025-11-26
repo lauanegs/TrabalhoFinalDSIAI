@@ -1,5 +1,23 @@
-C:\Users\FEPAM UNIPAM\Desktop\inventory_control_project\InventoryControl\src\Application\obj\Debug\net8.0\Application.csproj.AssemblyReference.cache
-C:\Users\FEPAM UNIPAM\Desktop\inventory_control_project\InventoryControl\src\Application\obj\Debug\net8.0\Application.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\FEPAM UNIPAM\Desktop\inventory_control_project\InventoryControl\src\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
-C:\Users\FEPAM UNIPAM\Desktop\inventory_control_project\InventoryControl\src\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
-C:\Users\FEPAM UNIPAM\Desktop\inventory_control_project\InventoryControl\src\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:/Users/FEPAM UNIPAM/Desktop/inventory_control_project/InventoryControl/src/Application/obj/Debug/net8.0/Application.csproj.AssemblyReference.cache
+C:/Users/FEPAM UNIPAM/Desktop/inventory_control_project/InventoryControl/src/Application/obj/Debug/net8.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/FEPAM UNIPAM/Desktop/inventory_control_project/InventoryControl/src/Application/obj/Debug/net8.0/Application.AssemblyInfoInputs.cache
+C:/Users/FEPAM UNIPAM/Desktop/inventory_control_project/InventoryControl/src/Application/obj/Debug/net8.0/Application.AssemblyInfo.cs
+C:/Users/FEPAM UNIPAM/Desktop/inventory_control_project/InventoryControl/src/Application/obj/Debug/net8.0/Application.csproj.CoreCompileInputs.cache
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.csproj.AssemblyReference.cache
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.AssemblyInfoInputs.cache
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.AssemblyInfo.cs
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.csproj.CoreCompileInputs.cache
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.sourcelink.json
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/bin/Debug/net8.0/Application.deps.json
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/bin/Debug/net8.0/Application.dll
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/bin/Debug/net8.0/Application.pdb
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/bin/Debug/net8.0/Domain.dll
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/bin/Debug/net8.0/Infrastructure.dll
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/bin/Debug/net8.0/Domain.pdb
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/bin/Debug/net8.0/Infrastructure.pdb
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.csproj.CopyComplete
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.dll
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/refint/Application.dll
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/Application.pdb
+/home/lauanegonzaga/trabalhoDesenvolvimento/TrabalhoFinalDSIAI/src/Application/obj/Debug/net8.0/ref/Application.dll

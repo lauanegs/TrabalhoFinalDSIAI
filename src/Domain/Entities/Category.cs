@@ -10,5 +10,7 @@ namespace Domain.Entities
 
         [Required, StringLength(80)]
         public string Name { get; set; } = null!;
+
+        public ICollection<Product> Products { get; set; } = new List<Product>();
     }
 }
