@@ -8,24 +8,39 @@
         <input asp-for="Name" class="form-control" />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
+
     <div class="mb-3">
         <label>Quantidade</label>
         <input asp-for="Quantity" class="form-control" />
         <span asp-validation-for="Quantity" class="text-danger"></span>
     </div>
+
     <div class="mb-3">
         <label>Preço</label>
         <input asp-for="Price" class="form-control" />
         <span asp-validation-for="Price" class="text-danger"></span>
     </div>
+
+    <div class="mb-3">
+        <label>Categoria</label>
+        <select asp-for="CategoryId" asp-items="ViewBag.CategoriesSelectList" class="form-control">
+            <option value="">-- Selecione --</option>
+        </select>
+        <span asp-validation-for="CategoryId" class="text-danger"></span>
+    </div>
+
     <div class="mb-3">
         <label>Descrição</label>
         <textarea asp-for="Description" class="form-control"></textarea>
     </div>
+
     <button class="btn btn-primary" type="submit">Salvar</button>
     <a class="btn btn-secondary" href="/Product">Cancelar</a>
 </form>
 
 @section Scripts {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.13/jquery.validate.unobtrusive.min.js"></script>
 }

@@ -1,0 +1,24 @@
+@model Application.ViewModels.CategoryViewModel
+
+@{
+    ViewData["Title"] = "Excluir Categoria";
+}
+
+<h2>Excluir Categoria</h2>
+
+<div class="alert alert-danger">
+    Tem certeza que deseja excluir a categoria abaixo?
+</div>
+
+<div>
+    <strong>Nome:</strong> @Model.Name
+</div>
+
+<br />
+
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <button class="btn btn-danger" type="submit">Confirmar Exclusão</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>
