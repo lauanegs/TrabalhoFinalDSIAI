@@ -8,11 +8,22 @@ namespace Infrastructure.Data
         public AppDbContext(DbContextOptions<AppDbContext> opts) : base(opts) { }
 
         public DbSet<Product> Products => Set<Product>();
+        public DbSet<Category> Categories => Set<Category>();
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            // additional Fluent API configuration can go here
+
+            modelBuilder.Entity<Product>()
+                .HasOne(p => p.Category)
+                .WithMany(c => c.Products)
+                .HasForeignKey(p => p.CategoryId)
+                .IsRequired(); 
+
+            modelBuilder.Entity<Category>()
+                .Property(c => c.Name)
+                .IsRequired()
+                .HasMaxLength(80);
         }
     }
 }
