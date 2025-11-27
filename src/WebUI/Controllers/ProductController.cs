@@ -43,7 +43,8 @@ namespace WebUI.Controllers
         public async Task<IActionResult> Edit(Guid id)
         {
             var vm = await _svc.GetByIdAsync(id);
-            if (vm == null) return NotFound();
+            if (vm == null)
+                return NotFound();
 
             await PopulateCategoriesSelectList(vm);
             return View(vm);
@@ -59,7 +60,8 @@ namespace WebUI.Controllers
             }
 
             var ok = await _svc.UpdateAsync(vm);
-            if (!ok) return NotFound();
+            if (!ok)
+                return NotFound();
 
             return RedirectToAction(nameof(Index));
         }
@@ -67,7 +69,8 @@ namespace WebUI.Controllers
         public async Task<IActionResult> Delete(Guid id)
         {
             var vm = await _svc.GetByIdAsync(id);
-            if (vm == null) return NotFound();
+            if (vm == null)
+                return NotFound();
 
             return View(vm);
         }
@@ -82,23 +85,35 @@ namespace WebUI.Controllers
         public async Task<IActionResult> Details(Guid id)
         {
             var vm = await _svc.GetByIdAsync(id);
-            if (vm == null) return NotFound();
+            if (vm == null)
+                return NotFound();
 
             return View(vm);
         }
 
         private async Task PopulateCategoriesSelectList(ProductViewModel vm)
         {
-            var categories = await _svc.GetCategoriesAsync(); 
+            var categories = await _svc.GetCategoriesAsync();
             vm.Categories = categories.ToList();
             ViewBag.CategoriesSelectList = categories
                 .Select(c => new SelectListItem
                 {
                     Value = c.Id.ToString(),
                     Text = c.Name,
-                    Selected = c.Id == vm.CategoryId
+                    Selected = c.Id == vm.CategoryId,
                 })
                 .ToList();
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Search(string term)
+        {
+            var list = await _svc.GetAllAsync();
+
+            if (!string.IsNullOrWhiteSpace(term))
+                list = list.Where(p => p.Name.Contains(term, StringComparison.OrdinalIgnoreCase));
+
+            return PartialView("_ProductTablePartial", list);
         }
     }
 }

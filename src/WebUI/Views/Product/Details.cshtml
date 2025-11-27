@@ -1,7 +1,12 @@
 @model Application.ViewModels.ProductViewModel
-<h3>Detalhes do Produto</h3>
-<div><strong>Nome:</strong> @Model.Name</div>
-<div><strong>Quantidade:</strong> @Model.Quantity</div>
-<div><strong>Preço:</strong> @Model.Price.ToString("C")</div>
-<div><strong>Descrição:</strong> @Model.Description</div>
-<a class="btn btn-secondary mt-3" href="/Product">Voltar</a>
+
+<div class="card shadow-sm p-4">
+    <h3 class="mb-3">Detalhes do Produto</h3>
+
+    <p><strong>Nome:</strong> @Model.Name</p>
+    <p><strong>Quantidade:</strong> @Model.Quantity</p>
+    <p><strong>Preço:</strong> @Model.Price.ToString("C")</p>
+    <p><strong>Descrição:</strong> @Model.Description</p>
+
+    <a class="btn btn-primary mt-3" href="/Product">Voltar</a>
+</div>
