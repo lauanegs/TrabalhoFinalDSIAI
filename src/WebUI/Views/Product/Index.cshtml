@@ -1,24 +1,51 @@
 @model IEnumerable<Application.ViewModels.ProductViewModel>
 
-<div class="d-flex justify-content-between align-items-center mb-3">
-    <h2>Produtos</h2>
-    <a class="btn btn-primary" href="/Product/Create">Novo Produto</a>
+<div class="card shadow-sm p-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="m-0">Produtos</h2>
+        <a class="btn btn-primary" href="/Product/Create">+ Novo Produto</a>
+    </div>
+
+    <!-- Busca -->
+    <div class="input-group mb-3">
+        <span class="input-group-text">
+            🔍
+        </span>
+        <input type="text" id="searchBox" class="form-control" placeholder="Buscar produto..." />
+    </div>
+
+    <div id="tableContainer">
+        @await Html.PartialAsync("_ProductTablePartial", Model)
+    </div>
 </div>
 
-<table class="table table-striped">
-    <thead><tr><th>Nome</th><th>Qtd</th><th>Preço</th><th></th></tr></thead>
-    <tbody>
-    @foreach(var p in Model) {
-        <tr>
-            <td>@p.Name</td>
-            <td>@p.Quantity</td>
-            <td>@p.Price.ToString("C")</td>
-            <td>
-                <a class="btn btn-sm btn-info" href="/Product/Details/@p.Id">Detalhes</a>
-                <a class="btn btn-sm btn-warning" href="/Product/Edit/@p.Id">Editar</a>
-                <a class="btn btn-sm btn-danger" href="/Product/Delete/@p.Id">Apagar</a>
-            </td>
-        </tr>
+@section Scripts {
+<script>
+(() => {
+    function debounce(fn, delay) {
+        let t;
+        return (...args) => {
+            clearTimeout(t);
+            t = setTimeout(() => fn(...args), delay);
+        };
     }
-    </tbody>
-</table>
+
+    const url = '@Url.Action("Search", "Product")';
+    const searchBox = document.getElementById('searchBox');
+    const tableContainer = document.getElementById('tableContainer');
+
+    async function doSearch(term) {
+        const params = new URLSearchParams();
+        if (term) params.set("term", term);
+
+        const resp = await fetch(`${url}?${params}`, {
+            headers: { "X-Requested-With": "XMLHttpRequest" }
+        });
+
+        tableContainer.innerHTML = await resp.text();
+    }
+
+    searchBox.addEventListener('input', debounce(e => doSearch(e.target.value), 300));
+})();
+</script>
+}
